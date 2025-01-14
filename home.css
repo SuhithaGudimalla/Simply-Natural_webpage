@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    flex-wrap: wrap;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: rgb(212, 212, 212);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+#logo {
+    display: flex;
+    justify-content: space-between;
+}
+#logo p{
+padding-top: 15px;
+}
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+    list-style-type: none;
+}
+nav ul li {
+    transition: background-color 0.3s ease;
+}
+nav ul li:hover {
+    background-color: #f0f0f0; 
+    border-radius: 4px;
+}
+header{
+    background-image: url(https://static.vecteezy.com/system/resources/previews/028/138/355/non_2x/light-grey-gradient-background-template-art-mosaic-grey-sweet-theme-cinematic-theme-texture-design-suitable-for-business-card-website-app-backdrop-product-montage-banner-illustration-free-vector.jpg);
+    height: 500px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius:50px ;
+    padding: 150;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+.htext{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 1.5s linear forwards;
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+    transform: translateY(0px);
+    }
+}
+header p{
+    font-size: 1.4rem;
+    padding-top: 80px;
+    padding-left: 300px;
+}
+header h1{
+    font-size: 3rem;
+    padding-top: 15spx;
+    padding-left: 300px;
+    padding-bottom: 15spx;
+}
+header button{
+    margin-left: 350px ;
+}
+header img{
+    padding-right: 50px;
+    padding-top: 80px;
+    opacity: 0;   
+    transform: scale(0);
+    animation: logoAppear 1.5s ease-out forwards; 
+}
+@keyframes logoAppear {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+main{
+    margin: 20px 60px;
+
+}
+section{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.item{
+    width: 250px;
+    padding: 20px;
+    text-align: justify;
+    box-shadow: 0px 0px 10px grey;
+    border-radius: 10px;
+    position: relative;
+}
+.item .new-sale{
+    position: absolute;
+    width: 50px;
+    top: 0%;
+    right: 1%;
+}
+.item button{
+    background-color: #9ecb9f;
+    padding: 8px 12px;
+    border: none;
+}
+.item button:hover {
+    background-color: #76b478;
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #929492;
+    padding: 50px 0px;
+
+}
+
+.links{
+    padding-top: 20px;
+}
+.text{
+    text-align: center;
+}
